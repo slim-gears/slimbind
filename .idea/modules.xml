@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbind.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbinding_main.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbinding_main.iml" group="slimbinding" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbinding_test.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbinding_test.iml" group="slimbinding" />
+    </modules>
+  </component>
+</project>
