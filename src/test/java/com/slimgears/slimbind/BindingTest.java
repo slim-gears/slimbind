@@ -1,18 +1,14 @@
-package com.slimgears.slimbinding;
+package com.slimgears.slimbind;
 
-import com.slimgears.slimbinding.model.ModelGenerator;
-import com.slimgears.slimbinding.properties.*;
+import com.slimgears.slimbind.model.ModelGenerator;
+import com.slimgears.slimbind.properties.*;
 import java8.util.function.Consumer;
-import java8.util.function.Predicate;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
-
-import java.lang.ref.WeakReference;
-import java.util.function.Supplier;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;

@@ -1,4 +1,4 @@
-package com.slimgears.slimbinding.properties;
+package com.slimgears.slimbind.properties;
 
 import java.util.Collection;
 

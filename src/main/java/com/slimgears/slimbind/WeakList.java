@@ -1,4 +1,4 @@
-package com.slimgears.slimbinding;
+package com.slimgears.slimbind;
 
 import java8.util.stream.Stream;
 import java8.util.stream.StreamSupport;

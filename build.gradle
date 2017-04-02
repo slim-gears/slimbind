@@ -2,7 +2,7 @@ plugins {
     id 'ru.vyarus.animalsniffer' version '1.3.0'
 }
 
-group 'com.slimgears.slimbinding'
+group 'com.slimgears.slimbind'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'

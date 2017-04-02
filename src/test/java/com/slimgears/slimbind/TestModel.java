@@ -1,8 +1,8 @@
-package com.slimgears.slimbinding;
+package com.slimgears.slimbind;
 
-import com.slimgears.slimbinding.annotations.Description;
-import com.slimgears.slimbinding.annotations.Title;
-import com.slimgears.slimbinding.properties.Property;
+import com.slimgears.slimbind.annotations.Description;
+import com.slimgears.slimbind.annotations.Title;
+import com.slimgears.slimbind.properties.Property;
 
 /**
  * Created by denis on 4/1/2017.

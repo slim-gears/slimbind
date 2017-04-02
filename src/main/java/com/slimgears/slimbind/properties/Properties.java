@@ -1,7 +1,7 @@
-package com.slimgears.slimbinding.properties;
+package com.slimgears.slimbind.properties;
 
-import com.slimgears.slimbinding.annotations.Description;
-import com.slimgears.slimbinding.annotations.Title;
+import com.slimgears.slimbind.annotations.Description;
+import com.slimgears.slimbind.annotations.Title;
 import java8.util.Optional;
 
 import java.lang.annotation.Annotation;

@@ -1,6 +1,6 @@
-package com.slimgears.slimbinding.properties;
+package com.slimgears.slimbind.properties;
 
-import com.slimgears.slimbinding.signals.Signal;
+import com.slimgears.slimbind.signals.Signal;
 
 /**
  * Created by denis on 3/31/2017.

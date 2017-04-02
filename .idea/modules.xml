@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbind.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbind.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbinding_main.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbinding_main.iml" group="slimbinding" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbinding_test.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbinding_test.iml" group="slimbinding" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbind_main.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbind_main.iml" group="slimbind" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbind_test.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbind_test.iml" group="slimbind" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/slimbinding.iml" filepath="$PROJECT_DIR$/.idea/modules/slimbinding.iml" />
     </modules>
   </component>
 </project>

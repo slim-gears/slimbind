@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="slimbind_main" target="1.8" />
+      <module name="slimbind_test" target="1.8" />
       <module name="slimbinding_main" target="1.8" />
       <module name="slimbinding_test" target="1.8" />
     </bytecodeTargetLevel>

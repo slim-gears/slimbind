@@ -1,4 +1,4 @@
-package com.slimgears.slimbinding.annotations;
+package com.slimgears.slimbind.annotations;
 
 /**
  * Created by denis on 4/1/2017.

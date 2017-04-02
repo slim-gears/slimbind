@@ -1,4 +1,4 @@
-package com.slimgears.slimbinding.annotations;
+package com.slimgears.slimbind.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

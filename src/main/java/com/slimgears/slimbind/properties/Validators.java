@@ -1,4 +1,4 @@
-package com.slimgears.slimbinding.properties;
+package com.slimgears.slimbind.properties;
 
 import java8.util.function.Function;
 import java8.util.function.Predicates;

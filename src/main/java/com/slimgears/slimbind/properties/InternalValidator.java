@@ -1,8 +1,8 @@
-package com.slimgears.slimbinding.properties;
+package com.slimgears.slimbind.properties;
 
-import com.slimgears.slimbinding.signals.Signal;
-import com.slimgears.slimbinding.WeakList;
-import com.slimgears.slimbinding.signals.Signals;
+import com.slimgears.slimbind.signals.Signal;
+import com.slimgears.slimbind.WeakList;
+import com.slimgears.slimbind.signals.Signals;
 import java8.util.function.Consumer;
 import java8.util.function.Function;
 import java8.util.stream.Collectors;

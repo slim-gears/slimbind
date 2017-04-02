@@ -1,8 +1,7 @@
-package com.slimgears.slimbinding.model;
+package com.slimgears.slimbind.model;
 
-import com.slimgears.slimbinding.properties.Properties;
-import com.slimgears.slimbinding.properties.Property;
-import com.slimgears.slimbinding.properties.ValidatedProperty;
+import com.slimgears.slimbind.properties.Properties;
+import com.slimgears.slimbind.properties.ValidatedProperty;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

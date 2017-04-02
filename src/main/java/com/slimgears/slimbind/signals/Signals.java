@@ -1,4 +1,4 @@
-package com.slimgears.slimbinding.signals;
+package com.slimgears.slimbind.signals;
 
 /**
  * Created by denis on 3/31/2017.
