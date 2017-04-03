@@ -1,4 +1,6 @@
-package com.slimgears.slimbind.signals;
+package com.slimgears.slimbind.signals.internal;
+
+import com.slimgears.slimbind.signals.Signal;
 
 import java.util.concurrent.Executor;
 

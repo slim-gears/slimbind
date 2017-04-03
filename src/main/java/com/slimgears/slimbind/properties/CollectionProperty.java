@@ -6,12 +6,12 @@
  */
 package com.slimgears.slimbind.properties;
 
-import com.slimgears.slimbind.signals.Signal;
+import com.slimgears.slimbind.signals.SignaledCollection;
 
 /**
  * Created by itskod on 02/04/2017.
  */
-public interface Property {
-    PropertyInfo info();
-    Signal<Boolean> enabled();
+public interface CollectionProperty<T> extends Property {
+    SignaledCollection<T> items();
+    ValueProperty<T> property(T value);
 }

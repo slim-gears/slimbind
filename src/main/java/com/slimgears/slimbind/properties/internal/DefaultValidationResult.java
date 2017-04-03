@@ -1,4 +1,6 @@
-package com.slimgears.slimbind.properties;
+package com.slimgears.slimbind.properties.internal;
+
+import com.slimgears.slimbind.properties.ValidationResult;
 
 import java.util.ArrayList;
 import java.util.Collection;

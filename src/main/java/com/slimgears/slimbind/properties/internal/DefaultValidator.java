@@ -1,7 +1,9 @@
-package com.slimgears.slimbind.properties;
+package com.slimgears.slimbind.properties.internal;
 
+import com.slimgears.slimbind.properties.ValidationResult;
+import com.slimgears.slimbind.properties.Validator;
 import com.slimgears.slimbind.signals.Signal;
-import com.slimgears.slimbind.WeakList;
+import com.slimgears.slimbind.utils.WeakList;
 import com.slimgears.slimbind.signals.Signals;
 import java8.util.function.Consumer;
 import java8.util.function.Function;
@@ -13,11 +15,12 @@ import java.util.Objects;
 /**
  * Created by denis on 3/31/2017.
  */
-public class InternalValidator<T> implements Validator<T> {
+public class DefaultValidator<T> implements Validator<T> {
     private final WeakList<Function<T, ? extends Exception>> validators = new WeakList<>();
     private final Signal<ValidationResult> resultSignal;
+    private ValidationResult lastResult;
 
-    public InternalValidator() {
+    public DefaultValidator() {
         this.resultSignal = Signals.<ValidationResult>builder()
                 .build();
     }
@@ -28,9 +31,9 @@ public class InternalValidator<T> implements Validator<T> {
                 .map(v -> v.apply(value))
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
-        ValidationResult result = new DefaultValidationResult(errors);
-        resultSignal.publish(result);
-        return result;
+        lastResult = new DefaultValidationResult(errors);
+        resultSignal.publish(lastResult);
+        return lastResult;
     }
 
     @Override
@@ -56,5 +59,15 @@ public class InternalValidator<T> implements Validator<T> {
     @Override
     public void publish(ValidationResult value) {
         throw new RuntimeException("Not implemented");
+    }
+
+    @Override
+    public void accept(ValidationResult validationResult) {
+        publish(validationResult);
+    }
+
+    @Override
+    public ValidationResult get() {
+        return lastResult;
     }
 }

@@ -1,0 +1,34 @@
+@startuml
+
+!include "skin.puml"
+
+package "Views" {
+    class PersonPanel {
+        - JLabel firstNameLabel
+        - JLabel lastNameLabel
+        - JSpinner ageSpinner
+    }
+}
+
+package "Models" {
+    interface PersonModel {
+        + ValueProperty<String> firstName()
+        + ValueProperty<String> lastName()
+        + ValueProperty<Integer> age()
+        + Action submit()
+    }
+}
+
+package "Controllers" {
+    class PersonController {
+        - onFirstNameChanged(String newName)
+        - onLastNameChanged(String newName)
+        - onAgeChanged(int newAge)
+        - onSubmit()
+    }
+}
+
+PersonPanel --> PersonModel
+PersonController --> PersonModel
+
+@enduml

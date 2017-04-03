@@ -15,4 +15,8 @@ public class Validators {
                 .map(errorSupplier)
                 .orElse(null);
     }
+
+    public static <T> Function<T, Exception> forPredicate(Predicate<T> predicate) {
+        return forPredicate(predicate, val -> new Exception("Invalid value"));
+    }
 }

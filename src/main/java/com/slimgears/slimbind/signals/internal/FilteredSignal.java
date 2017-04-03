@@ -1,11 +1,12 @@
-package com.slimgears.slimbind.signals;
+package com.slimgears.slimbind.signals.internal;
 
+import com.slimgears.slimbind.signals.Signal;
 import java8.util.function.Predicate;
 
 /**
  * Created by denis on 4/1/2017.
  */
-class FilteredSignal<T> extends DefaultSignal<T> {
+public class FilteredSignal<T> extends DefaultSignal<T> {
     private final Predicate<T> predicate;
 
     private FilteredSignal(Signal<T> signal, Predicate<T> predicate) {

@@ -1,7 +1,10 @@
 package com.slimgears.slimbind;
 
+import com.slimgears.slimbind.properties.AnnotationInfoProvider;
 import com.slimgears.slimbind.model.ModelGenerator;
 import com.slimgears.slimbind.properties.*;
+import com.slimgears.slimbind.signals.Signal;
+import com.slimgears.slimbind.signals.Signals;
 import java8.util.function.Consumer;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,7 +23,7 @@ import static org.mockito.Mockito.*;
 public class BindingTest {
     @Test
     public void statefulProperty_publishThenSubscribe_shouldReceiveValue() {
-        Property<String> stringProperty = Properties.builder(String.class).build();
+        ValueProperty<String> stringProperty = Properties.value(String.class).build();
 
         stringProperty.publish("Hello");
 
@@ -32,8 +35,8 @@ public class BindingTest {
 
     @Test
     public void validatedProperty_publishWhenValidationFailed_doesNotTriggerSubscriber() {
-        ValidatedProperty<String> stringProperty = Properties
-                .builder(String.class)
+        ValueProperty<String> stringProperty = Properties
+                .value(String.class)
                 .validator(Validators.forPredicate((String str) -> str.contains("World"), str -> new Exception("Wrong input: " + str)))
                 .build();
 
@@ -52,8 +55,22 @@ public class BindingTest {
     }
 
     @Test
+    public void recursiveBinding_shouldNotProduceEndlessInvocations() {
+        Signal<Integer> first = Signals.newSignal();
+        Signal<Integer> second = Signals.newSignal();
+        first.subscribe(val -> second.publish(val + 1));
+        second.subscribe(val -> first.publish(val - 1));
+
+        Consumer<Integer> consumer = consumerMock();
+        second.subscribe(consumer);
+
+        first.publish(1);
+        verify(consumer, times(1)).accept(any());
+    }
+
+    @Test
     public void generatedModel_hasAllProperties() {
-        TestModel model = new ModelGenerator().generateModel(TestModel.class);
+        PersonModel model = new ModelGenerator(new AnnotationInfoProvider()).generateModel(PersonModel.class);
 
         Assert.assertNotNull(model.age());
         Assert.assertNotNull(model.firstName());
@@ -66,7 +83,7 @@ public class BindingTest {
         verify(firstNameConsumer).accept("John");
 
         model.firstName().publish("John");
-        verify(firstNameConsumer, times(1)).accept(any());
+        verify(firstNameConsumer, times(2)).accept(any());
     }
 
     private static <T> Consumer<T> consumerMock() {

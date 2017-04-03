@@ -2,6 +2,7 @@ package com.slimgears.slimbind.properties;
 
 import com.slimgears.slimbind.annotations.Description;
 import com.slimgears.slimbind.annotations.Title;
+import com.slimgears.slimbind.properties.internal.DefaultValueProperty;
 import java8.util.Optional;
 
 import java.lang.annotation.Annotation;
@@ -11,8 +12,8 @@ import java.lang.reflect.Method;
  * Created by denis on 3/31/2017.
  */
 public class Properties {
-    public static <T> DefaultValidatedProperty.Builder<T> builder(Class<T> type) {
-        return new DefaultValidatedProperty.Builder<>(type);
+    public static <T> DefaultValueProperty.Builder<T> value(Class<T> type) {
+        return new DefaultValueProperty.Builder<>();
     }
 
     public static String descriptionForMethod(Method method) {

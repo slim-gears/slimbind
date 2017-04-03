@@ -1,0 +1,21 @@
+@startuml
+
+skinparam sequenceArrowThickness 2
+skinparam classAttributeIconSize 12
+skinparam roundcorner 6
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+skinparam backgroundColor LightGray
+skinparam textColor White
+skinparam shadowing false
+skinparam class {
+	BackgroundColor White
+	ArrowColor Blue
+	BorderColor Black
+}
+
+skinparam stereotypeCBackgroundColor DodgerBlue
+skinparam stereotypeIBackgroundColor Lime
+skinparam stereotypeABackgroundColor Cyan
+
+@enduml
